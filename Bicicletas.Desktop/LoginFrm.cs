@@ -12,6 +12,7 @@ namespace Bicicletas.Desktop
 {
     public partial class LoginFrm : Form
     {
+         //Comentario de prueba GitHub
         public LoginFrm()
         {
             InitializeComponent();
