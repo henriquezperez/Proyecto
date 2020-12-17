@@ -24,10 +24,7 @@ namespace Bicicletas.DataAccess
 
                 return _instance;
             }
-
-
         }
-
 
         //PARA ESTADOS
         public List<Estados> SelectAll()
@@ -160,7 +157,6 @@ namespace Bicicletas.DataAccess
 
             return result;
         }
-
 
         public bool Delete(int id)
         {

@@ -48,7 +48,7 @@ namespace Bicicletas.DataAccess
                                 {
                                     Marca entity = new Marca();
                                     entity.MarcaId = dr.GetInt32(0);
-                                    entity.Nombre = dr.GetString(1);
+                                    entity.NombreMarca = dr.GetString(1);
                                     _listado.Add(entity);
                                 }
                             }
@@ -87,7 +87,7 @@ namespace Bicicletas.DataAccess
                                 {
                                     Marca entity = new Marca();
                                     entity.MarcaId = dr.GetInt32(0);
-                                    entity.Nombre = dr.GetString(1);
+                                    entity.NombreMarca = dr.GetString(1);
                                 }
                             }
                         }
@@ -115,7 +115,7 @@ namespace Bicicletas.DataAccess
                     using (SqlCommand cmd = new SqlCommand("sp_MarcaInsert", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@Nombre", entity.Nombre);
+                        cmd.Parameters.AddWithValue("@Nombre", entity.NombreMarca);
 
                         conn.Open();
 
@@ -144,7 +144,7 @@ namespace Bicicletas.DataAccess
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@MarcaId", entity.MarcaId);
-                        cmd.Parameters.AddWithValue("@Nombre", entity.Nombre);
+                        cmd.Parameters.AddWithValue("@Nombre", entity.NombreMarca);
 
                         conn.Open();
 

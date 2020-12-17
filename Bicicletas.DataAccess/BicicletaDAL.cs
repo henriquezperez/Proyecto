@@ -54,12 +54,14 @@ namespace Bicicletas.DataAccess
                                     Precio = dr.GetDecimal(6),
                                    
                                 };
+
                                 result.Add(entity);
                             }
                         }
                     }
                 }
             }
+
             return result;
         }
 
@@ -71,6 +73,7 @@ namespace Bicicletas.DataAccess
             {
                 using (SqlCommand cmd = new SqlCommand("Sp_BicicletaInsert", conn))
                 {
+
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ThamanhoId", entity.ThamanhoId);
                     cmd.Parameters.AddWithValue("@CategoriaId", entity.CategoriaId);
@@ -80,6 +83,7 @@ namespace Bicicletas.DataAccess
                     cmd.Parameters.AddWithValue("@Precio", entity.Precio);
 
                     conn.Open();
+
                     result = cmd.ExecuteNonQuery() > 0;
                 }
 
@@ -87,6 +91,7 @@ namespace Bicicletas.DataAccess
 
             return result;
         }
+
 
 
         public bool Update(Bicicleta entity)
@@ -113,6 +118,7 @@ namespace Bicicletas.DataAccess
             }
 
             return result;
+
         }
         public Bicicleta SelectAllById(int id)
         {

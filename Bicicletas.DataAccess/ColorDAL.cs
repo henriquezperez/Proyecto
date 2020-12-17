@@ -48,7 +48,7 @@ namespace Bicicletas.DataAccess
                                 entity = new Color()
                                 {
                                     ColorId = dr.GetInt32(0),
-                                    Nombre = dr.GetString(1),
+                                    NombreColor = dr.GetString(1),
                                 };
                                 result.Add(entity);
                             }
@@ -69,7 +69,7 @@ namespace Bicicletas.DataAccess
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ColorId", entity.ColorId);
-                    cmd.Parameters.AddWithValue("@Nombre", entity.Nombre);
+                    cmd.Parameters.AddWithValue("@Nombre", entity.NombreColor);
 
                     conn.Open();
                     result = cmd.ExecuteNonQuery() > 0;
@@ -91,7 +91,7 @@ namespace Bicicletas.DataAccess
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ColorId", entity.ColorId);
-                    cmd.Parameters.AddWithValue("@Nombre", entity.Nombre);
+                    cmd.Parameters.AddWithValue("@Nombre", entity.NombreColor);
 
                     conn.Open();
 
@@ -119,7 +119,7 @@ namespace Bicicletas.DataAccess
                             result = new Color()
                             {
                                 ColorId = dr.GetInt32(0),
-                                Nombre = dr.GetString(1),
+                                NombreColor = dr.GetString(1),
                             };
 
                         }

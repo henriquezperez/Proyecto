@@ -14,5 +14,27 @@ namespace Bicicletas.Entities
 
         public int TamanhoId { get; set; }
 
+        public ClasificacionBici ()
+        {
+
+
+        }
+        public ClasificacionBici(string nombre, int tamanho)
+        {
+            NombreClasificacion = nombre;
+
+
+        }
+        public ClasificacionBici(int clasificacion, string nombre, int tamanho)
+        {
+            ClasificacionBiciId = clasificacion;
+            NombreClasificacion = nombre;
+            TamanhoId = tamanho;
+
+
+        }
+
+
+
     }
 }
