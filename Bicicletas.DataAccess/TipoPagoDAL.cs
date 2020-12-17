@@ -44,10 +44,9 @@ namespace Bicicletas.DataAccess
                             while (dr.Read())
                             {
                                 TipoPago entity = new TipoPago();
-                                entity.TarjetaId = dr.GetInt32(0);
                                 entity.Nombre = dr.GetString(1);
-                                entity.EfectivoId = dr.GetInt32(2);
-                                entity.TarjetaId = dr.GetInt32(3);
+                                entity.EfectivoCant = dr.GetInt32(2);
+                                
                                 _listado.Add(entity);
                             }
                         }
@@ -77,10 +76,10 @@ namespace Bicicletas.DataAccess
                             while (dr.Read())
                             {
                                 TipoPago entity = new TipoPago();
-                                entity.TarjetaId = dr.GetInt32(0);
+                               
                                 entity.Nombre = dr.GetString(1);
-                                entity.EfectivoId = dr.GetInt32(2);
-                                entity.TarjetaId = dr.GetInt32(3);
+                                entity.EfectivoCant = dr.GetInt32(2);
+                                
                             }
                         }
                     }
@@ -102,8 +101,8 @@ namespace Bicicletas.DataAccess
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Nombre", entity.Nombre);
-                    cmd.Parameters.AddWithValue("@EfectivoId", entity.EfectivoId);
-                    cmd.Parameters.AddWithValue("@TarjetaId", entity.TarjetaId);
+                    cmd.Parameters.AddWithValue("@EfectivoId", entity.EfectivoCant);
+                   
 
                     conn.Open();
 
@@ -125,8 +124,8 @@ namespace Bicicletas.DataAccess
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Nombre", entity.Nombre);
-                    cmd.Parameters.AddWithValue("@EfectivoId", entity.EfectivoId);
-                    cmd.Parameters.AddWithValue("@TarjetaId", entity.TarjetaId);
+                    cmd.Parameters.AddWithValue("@EfectivoId", entity.EfectivoCant);
+                    
 
                     conn.Open();
 

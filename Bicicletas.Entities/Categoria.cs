@@ -10,34 +10,27 @@ namespace Bicicletas.Entities
     {
         public int CategoriaId { get; set; }
 
-        public string Nombre { get; set; }
+        public string NombreCategoria { get; set; }
 
-        public int NinhoTipoId { get; set; }
+        public int ClasificacionBiciId { get; set; }
 
-        public int AdulTipoId { get; set; }
 
         public Categoria()
         {
 
         }
 
-        public Categoria(string nombreCategoria, int ninhoId)
+        public Categoria(string nombreCategoria, int clasificacionId)
         {
-            Nombre = nombreCategoria;
-
-            NinhoTipoId = ninhoId;
+            NombreCategoria = nombreCategoria;
+            ClasificacionBiciId = clasificacionId;
         }
-        /*
-        public Categoria(string nombreCategoria, int adultId)
-        {
-            NombreCategoria = nombreCategori;
-            AdulTipoId = adultId;
-        }
-        */
-        public Categoria(int categoriaId, string nombreCategoria)
+      
+        public Categoria(int categoriaId, string nombreCategoria, int clasificacionId)
         {
             CategoriaId = categoriaId;
-            Nombre = nombreCategoria;
+            NombreCategoria = nombreCategoria;
+            ClasificacionBiciId = clasificacionId;
         }
     }
 }

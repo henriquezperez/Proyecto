@@ -9,7 +9,7 @@ namespace Bicicletas.Entities
     public class Marca
     {
         public int MarcaId { get; set; }
-        public string Nombre { get; set; }
+        public string NombreMarca { get; set; }
 
         public Marca()
         {
@@ -18,14 +18,14 @@ namespace Bicicletas.Entities
 
         public Marca(string nombre)
         {
-            Nombre = nombre;
+            NombreMarca = nombre;
 
         }
 
         public Marca(int marcaId, string nombre)
         {
             MarcaId = marcaId;
-            Nombre = nombre;
+            NombreMarca = nombre;
 
         }
     }

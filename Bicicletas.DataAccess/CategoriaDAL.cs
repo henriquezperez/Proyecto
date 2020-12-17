@@ -47,7 +47,7 @@ namespace Bicicletas.DataAccess
                                 {
                                     Categoria entity = new Categoria();
                                     entity.CategoriaId = dr.GetInt32(0);
-                                    entity.Nombre = dr.GetString(1);
+                                    entity.NombreCategoria = dr.GetString(1);
                                     _listado.Add(entity);
                                 }
                             }
@@ -86,7 +86,7 @@ namespace Bicicletas.DataAccess
                                 {
                                     Categoria entity = new Categoria();
                                     entity.CategoriaId = dr.GetInt32(0);
-                                    entity.Nombre = dr.GetString(1);
+                                    entity.NombreCategoria = dr.GetString(1);
                                 }
                             }
                         }
@@ -114,7 +114,7 @@ namespace Bicicletas.DataAccess
                     using (SqlCommand cmd = new SqlCommand("sp_CategoriaInsert", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@Nombre", entity.Nombre);
+                        cmd.Parameters.AddWithValue("@Nombre", entity.NombreCategoria);
 
                         conn.Open();
 
@@ -143,7 +143,7 @@ namespace Bicicletas.DataAccess
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@CategoriaId", entity.CategoriaId);
-                        cmd.Parameters.AddWithValue("@Nombre", entity.Nombre);
+                        cmd.Parameters.AddWithValue("@Nombre", entity.NombreCategoria);
 
                         conn.Open();
 

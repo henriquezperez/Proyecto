@@ -41,19 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdultoBiciBL.cs" />
     <Compile Include="BicicletaBL.cs" />
     <Compile Include="CategoriaBL.cs" />
     <Compile Include="ClienteBL.cs" />
     <Compile Include="ColorBL.cs" />
-    <Compile Include="EfectivoBL.cs" />
     <Compile Include="EstadoBL.cs" />
     <Compile Include="MarcaBL.cs" />
-    <Compile Include="NinhoBiciBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RecargoTarjetaBL.cs" />
     <Compile Include="TamanhoBiciBL.cs" />
-    <Compile Include="TarjetaBL.cs" />
     <Compile Include="TipoPagoBL.cs" />
     <Compile Include="VentasBL.cs" />
   </ItemGroup>

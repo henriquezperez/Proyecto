@@ -9,7 +9,7 @@ namespace Bicicletas.Entities
     public class Color
     {
         public int ColorId { get; set; }
-        public string Nombre { get; set; }
+        public string NombreColor { get; set; }
 
         public Color()
         {
@@ -18,7 +18,7 @@ namespace Bicicletas.Entities
 
         public Color(string nombre)
         {
-            Nombre = nombre;
+            NombreColor = nombre;
 
         }
 
@@ -26,7 +26,7 @@ namespace Bicicletas.Entities
         {
             ColorId = colorId;
 
-            Nombre = nombre;
+            NombreColor = nombre;
 
         }
     }

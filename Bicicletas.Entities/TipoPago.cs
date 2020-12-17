@@ -12,9 +12,8 @@ namespace Bicicletas.Entities
 
         public string Nombre { get; set; }
 
-        public int EfectivoId { get; set; }
+        public decimal EfectivoCant { get; set; }
 
-        public int TarjetaId { get; set; }
 
         public TipoPago()
         {
@@ -26,10 +25,11 @@ namespace Bicicletas.Entities
             Nombre = nombre;
         }
 
-        public TipoPago(int pagoId, string nombre)
+        public TipoPago(int pagoId, string nombre, decimal efectivoCant)
         {
             PagoId = pagoId;
             Nombre = nombre;
+            EfectivoCant = efectivoCant;
 
         }
     }

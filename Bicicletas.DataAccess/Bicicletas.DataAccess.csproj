@@ -42,20 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdultoBiciDAL.cs" />
     <Compile Include="BicicletaDAL.cs" />
     <Compile Include="CategoriaDAL.cs" />
+    <Compile Include="ClasificacionBiciDAL.cs" />
     <Compile Include="ClienteDAL.cs" />
     <Compile Include="ColorDAL.cs" />
     <Compile Include="Conexion.cs" />
-    <Compile Include="EfectivoDAL.cs" />
+    <Compile Include="DetalleVentaDAL.cs" />
     <Compile Include="EstadosDAL.cs" />
+    <Compile Include="GarantiaDAL.cs" />
     <Compile Include="MarcaDAL.cs" />
-    <Compile Include="NinhoBiciDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RecargoTarjetaDAL.cs" />
     <Compile Include="TamahoBiciDAL.cs" />
-    <Compile Include="TarjetaDAL.cs" />
     <Compile Include="TipoPagoDAL.cs" />
     <Compile Include="VentaDAL.cs" />
   </ItemGroup>
