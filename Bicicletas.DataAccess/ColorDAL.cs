@@ -34,7 +34,7 @@ namespace Bicicletas.DataAccess
 
             using (SqlConnection conn = new SqlConnection(_cadena))
             {
-                using (SqlCommand cmd = new SqlCommand("Sp_ColorSelectAll", conn))
+                using (SqlCommand cmd = new SqlCommand("sp_ColorSelectAll", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     conn.Open();
@@ -65,7 +65,7 @@ namespace Bicicletas.DataAccess
 
             using (SqlConnection conn = new SqlConnection(_cadena))
             {
-                using (SqlCommand cmd = new SqlCommand("Sp_ColorInsert", conn))
+                using (SqlCommand cmd = new SqlCommand("sp_ColorInsert", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ColorId", entity.ColorId);
@@ -87,7 +87,7 @@ namespace Bicicletas.DataAccess
 
             using (SqlConnection conn = new SqlConnection(_cadena))
             {
-                using (SqlCommand cmd = new SqlCommand("Sp_ColorUpdate", conn))
+                using (SqlCommand cmd = new SqlCommand("sp_ColorUpdate", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ColorId", entity.ColorId);
@@ -107,7 +107,7 @@ namespace Bicicletas.DataAccess
 
             using (SqlConnection con = new SqlConnection(_cadena))
             {
-                using (SqlCommand cmd = new SqlCommand("Sp_ColorSelectById", con))
+                using (SqlCommand cmd = new SqlCommand("sp_ColorSelectById", con))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ColorId", id);
@@ -136,7 +136,7 @@ namespace Bicicletas.DataAccess
 
             using (SqlConnection con = new SqlConnection(_cadena))
             {
-                using (SqlCommand cmd = new SqlCommand("Sp_ColorDelete", con))
+                using (SqlCommand cmd = new SqlCommand("sp_ColorDelete", con))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ColorId", id);

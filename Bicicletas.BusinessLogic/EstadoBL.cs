@@ -8,7 +8,7 @@ using Bicicletas.DataAccess;
 
 namespace Bicicletas.BusinessLogic
 {
-    class EstadoBL
+    public class EstadoBL
     {
         private static EstadoBL _instance;
 
@@ -26,6 +26,11 @@ namespace Bicicletas.BusinessLogic
         public List<Estados> SelectAll()
         {
             return EstadosDAL.Instance.SelectAll();
+        }
+
+        public Estados SelectById(int id)
+        {
+            return EstadosDAL.Instance.SelectById(id);
         }
 
         public bool Insert(Estados entity)

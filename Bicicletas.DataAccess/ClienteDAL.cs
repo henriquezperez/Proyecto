@@ -33,7 +33,7 @@ namespace Bicicletas.DataAccess
 
             using (SqlConnection conn = new SqlConnection(_cadena))
             {
-                using (SqlCommand cmd = new SqlCommand("Sp_ClientesSelectAll", conn))
+                using (SqlCommand cmd = new SqlCommand("sp_ClientesSelectAll", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     conn.Open();
@@ -65,7 +65,7 @@ namespace Bicicletas.DataAccess
 
             using (SqlConnection conn = new SqlConnection(_cadena))
             {
-                using (SqlCommand cmd = new SqlCommand("Sp_ClientesInsert", conn))
+                using (SqlCommand cmd = new SqlCommand("sp_ClientesInsert", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@DUI", entity.DUI);
@@ -88,7 +88,7 @@ namespace Bicicletas.DataAccess
 
             using (SqlConnection conn = new SqlConnection(_cadena))
             {
-                using (SqlCommand cmd = new SqlCommand("Sp_AdultoBiciUpdate", conn))
+                using (SqlCommand cmd = new SqlCommand("sp_ClienteUpdate", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@DUI", entity.DUI);

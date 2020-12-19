@@ -29,26 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginFrm));
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btnstar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txtcontra = new System.Windows.Forms.TextBox();
+            this.Txtusuari = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // Btnstar
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(300, 208);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 32);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Btnstar.BackColor = System.Drawing.Color.White;
+            this.Btnstar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btnstar.Location = new System.Drawing.Point(300, 208);
+            this.Btnstar.Name = "Btnstar";
+            this.Btnstar.Size = new System.Drawing.Size(75, 32);
+            this.Btnstar.TabIndex = 0;
+            this.Btnstar.Text = "Aceptar";
+            this.Btnstar.UseVisualStyleBackColor = false;
+            this.Btnstar.Click += new System.EventHandler(this.Btnstar_Click);
             // 
             // label1
             // 
@@ -70,19 +71,20 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Ingresa tu contraseña";
             // 
-            // textBox2
+            // Txtcontra
             // 
-            this.textBox2.Location = new System.Drawing.Point(236, 159);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 20);
-            this.textBox2.TabIndex = 3;
+            this.Txtcontra.Location = new System.Drawing.Point(236, 159);
+            this.Txtcontra.Name = "Txtcontra";
+            this.Txtcontra.Size = new System.Drawing.Size(199, 20);
+            this.Txtcontra.TabIndex = 3;
             // 
-            // textBox1
+            // Txtusuari
             // 
-            this.textBox1.Location = new System.Drawing.Point(236, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 20);
-            this.textBox1.TabIndex = 1;
+            this.Txtusuari.Location = new System.Drawing.Point(236, 78);
+            this.Txtusuari.Name = "Txtusuari";
+            this.Txtusuari.Size = new System.Drawing.Size(199, 20);
+            this.Txtusuari.TabIndex = 1;
+            this.Txtusuari.TextChanged += new System.EventHandler(this.Txtusuari_TextChanged);
             // 
             // pictureBox1
             // 
@@ -113,10 +115,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Txtcontra);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Txtusuari);
+            this.Controls.Add(this.Btnstar);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "LoginFrm";
             this.Text = "LoginFrm";
@@ -129,11 +131,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btnstar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txtcontra;
+        private System.Windows.Forms.TextBox Txtusuari;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
     }

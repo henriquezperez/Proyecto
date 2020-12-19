@@ -1,0 +1,48 @@
+sp_EstadosSelectAll   ok
+sp_EstadosSelectById
+sp_EstadosInsert
+sp_EstadosUpdate
+sp_EstadosDelete
+
+sp_MarcaSelectAll       ok
+sp_MarcaSelectById
+sp_MarcaInsert
+sp_MarcaUpdate
+sp_MarcaDelete
+
+sp_ColorSelectAll       ok
+sp_ColorInsert
+sp_ColorUpdate
+sp_ColorSelectById
+Sp_ColorDelete
+
+sp_CategoriaSelectAll     ok
+sp_CategoriaSelectById
+sp_CategoriaInsert
+sp_CategoriaUpdate
+sp_CategoriaDelete
+
+sp_TamanhoBiciSelectAll    ok
+sp_TamanhoBiciSelectById
+sp_TamanhoBiciInsert
+sp_TamanhoBiciUpdate
+sp_TamanhoBiciDelete
+
+sp_ClienteSelectAll        ok
+sp_ClienteInsert
+sp_ClienteUpdate
+sp_ClienteSelectById
+sp_ClienteDelete
+
+sp_BicicletaSelectAll     ok
+sp_BicicletaInsert
+sp_BicicletaUpdate
+sp_BicicletaSelectById
+sp_BicicletaDelete
+
+sp_ClasificacionSelectAll   ok
+sp_ClasificacionInsert
+sp_ClasificacionUpdate
+sp_ClasificacionSelectById
+sp_ClasificacionDelete
+

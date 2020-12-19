@@ -8,7 +8,7 @@ USE ProyectoBD
 create table Tamanho(
 
 	TamanhoId int identity (1,1) not null primary key,
-	NombreTamanhao int  not null
+	NombreTamanho varchar (25)  not null
 )
 
 
@@ -54,7 +54,7 @@ create table Bicicleta(
  BicicletaId int identity (1,1) not null primary key,
  TamanhoId int not null foreign key (TamanhoId) references Tamanho(TamanhoId),
  CategoriaId int not null foreign key (CategoriaId) references Categoria(CategoriaId),
- Marcaid int not null foreign key (Marcaid) references Marca(Marcaid),
+ MarcaId int not null foreign key (MarcaId) references Marca(MarcaId),
  GarantiaId int null foreign key(GarantiaId) references Garantia(GarantiaId),
  ColorId int not null foreign key (ColorId) references Color(ColorId),
  Precio money not null

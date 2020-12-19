@@ -48,9 +48,11 @@
   <ItemGroup>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="frmBicicletas.cs">
       <SubType>Form</SubType>
@@ -70,11 +72,11 @@
     <Compile Include="frmEstados.Designer.cs">
       <DependentUpon>frmEstados.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNuevoEstado.cs">
+    <Compile Include="FrmNuevoEstado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNuevoEstado.Designer.cs">
-      <DependentUpon>frmNuevoEstado.cs</DependentUpon>
+    <Compile Include="FrmNuevoEstado.Designer.cs">
+      <DependentUpon>FrmNuevoEstado.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginFrm.cs">
       <SubType>Form</SubType>
@@ -86,6 +88,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBicicletas.resx">
       <DependentUpon>frmBicicletas.cs</DependentUpon>
@@ -96,8 +99,8 @@
     <EmbeddedResource Include="frmEstados.resx">
       <DependentUpon>frmEstados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNuevoEstado.resx">
-      <DependentUpon>frmNuevoEstado.cs</DependentUpon>
+    <EmbeddedResource Include="FrmNuevoEstado.resx">
+      <DependentUpon>FrmNuevoEstado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
@@ -123,6 +126,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bicicletas.BusinessLogic\Bicicletas.BusinessLogic.csproj">
+      <Project>{23bfc5c0-36f2-4cd7-9cca-8dc9577c248a}</Project>
+      <Name>Bicicletas.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bicicletas.Entities\Bicicletas.Entities.csproj">
+      <Project>{3c742433-acc7-4323-aacc-9680c99342f0}</Project>
+      <Name>Bicicletas.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

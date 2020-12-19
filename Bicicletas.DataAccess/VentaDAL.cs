@@ -43,17 +43,13 @@ namespace Bicicletas.DataAccess
                             while (dr.Read())
                             {
                                 Venta entity = new Venta();
-                                entity.BicicletaId = dr.GetInt32(0);
-                                entity.Nombres = dr.GetString(1);
-                                entity.Apellidos = dr.GetString(2);
-                                entity.DUI = dr.GetInt32(3);
-                                entity.FechaId = dr.GetString(4);
-                                entity.PagoId = dr.GetInt32(5);
-                                entity.EstadoId = dr.GetInt32(6);
-                                entity.GarantiaId = dr.GetInt32(7);
-                                entity.Cantidad = dr.GetInt32(8);
-                                entity.Subtotal = dr.GetDecimal(9);
-                                entity.Total = dr.GetDecimal(10);
+                                entity.VentaId = dr.GetInt32(0);
+                                entity.BicicletaId = dr.GetInt32(1);
+                                entity.ClienteId = dr.GetInt32(2);
+                                entity.Fecha = dr.GetDateTime(3);
+                                entity.PagoId = dr.GetInt32(4);
+                                entity.EstadoId = dr.GetInt32(5);
+                                entity.Total = dr.GetDecimal(6);
 
                                 _listado.Add(entity);
                             }
@@ -84,17 +80,13 @@ namespace Bicicletas.DataAccess
                             while (dr.Read())
                             {
                                 Venta entity = new Venta();
-                                entity.BicicletaId = dr.GetInt32(0);
-                                entity.Nombres = dr.GetString(1);
-                                entity.Apellidos = dr.GetString(2);
-                                entity.DUI = dr.GetInt32(3);
-                                entity.FechaId = dr.GetString(4);
-                                entity.PagoId = dr.GetInt32(5);
-                                entity.EstadoId = dr.GetInt32(6);
-                                entity.GarantiaId = dr.GetInt32(7);
-                                entity.Cantidad = dr.GetInt32(8);
-                                entity.Subtotal = dr.GetDecimal(9);
-                                entity.Total = dr.GetDecimal(10);
+                                entity.VentaId = dr.GetInt32(0);
+                                entity.BicicletaId = dr.GetInt32(1);
+                                entity.ClienteId = dr.GetInt32(2);
+                                entity.Fecha = dr.GetDateTime(3);
+                                entity.PagoId = dr.GetInt32(4);
+                                entity.EstadoId = dr.GetInt32(5);
+                                entity.Total = dr.GetDecimal(6);
                             }
                         }
                     }
@@ -115,16 +107,14 @@ namespace Bicicletas.DataAccess
                 using (SqlCommand cmd = new SqlCommand("sp_VentaInsert", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@VentaId", entity.VentaId);
                     cmd.Parameters.AddWithValue("@BicicletaId", entity.BicicletaId);
-                    cmd.Parameters.AddWithValue("@Nombres", entity.Nombres);
-                    cmd.Parameters.AddWithValue("@Apellidos", entity.Apellidos);
-                    cmd.Parameters.AddWithValue("@DUI", entity.DUI);
-                    cmd.Parameters.AddWithValue("@FechaId", entity.FechaId);
+               
+                    cmd.Parameters.AddWithValue("@ClienteId", entity.ClienteId);
+                    cmd.Parameters.AddWithValue("@FechaId", entity.Fecha);
                     cmd.Parameters.AddWithValue("@PagoId", entity.PagoId);
                     cmd.Parameters.AddWithValue("@EstadoId", entity.EstadoId);
-                    cmd.Parameters.AddWithValue("@GarantiaId", entity.GarantiaId);
-                    cmd.Parameters.AddWithValue("@Cantidad", entity.Cantidad);
-                    cmd.Parameters.AddWithValue("@Subtotal", entity.Subtotal);
+               
                     cmd.Parameters.AddWithValue("@Total", entity.Total);
 
                     conn.Open();
@@ -146,16 +136,15 @@ namespace Bicicletas.DataAccess
                 using (SqlCommand cmd = new SqlCommand("sp_VentaUpdate", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@VentaId", entity.VentaId);
                     cmd.Parameters.AddWithValue("@BicicletaId", entity.BicicletaId);
-                    cmd.Parameters.AddWithValue("@Nombres", entity.Nombres);
-                    cmd.Parameters.AddWithValue("@Apellidos", entity.Apellidos);
-                    cmd.Parameters.AddWithValue("@DUI", entity.DUI);
-                    cmd.Parameters.AddWithValue("@FechaId", entity.FechaId);
+
+                    cmd.Parameters.AddWithValue("@ClienteId", entity.ClienteId);
+                    cmd.Parameters.AddWithValue("@FechaId", entity.Fecha);
                     cmd.Parameters.AddWithValue("@PagoId", entity.PagoId);
                     cmd.Parameters.AddWithValue("@EstadoId", entity.EstadoId);
-                    cmd.Parameters.AddWithValue("@GarantiaId", entity.GarantiaId);
-                    cmd.Parameters.AddWithValue("@Cantidad", entity.Cantidad);
-                    cmd.Parameters.AddWithValue("@Subtotal", entity.Subtotal);
+
                     cmd.Parameters.AddWithValue("@Total", entity.Total);
 
                     conn.Open();

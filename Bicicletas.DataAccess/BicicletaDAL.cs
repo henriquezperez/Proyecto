@@ -32,7 +32,7 @@ namespace Bicicletas.DataAccess
 
             using (SqlConnection conn = new SqlConnection(_cadena))
             {
-                using (SqlCommand cmd = new SqlCommand("Sp_BicicletaSelectAll", conn))
+                using (SqlCommand cmd = new SqlCommand("sp_BicicletaSelectAll", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     conn.Open();
@@ -71,7 +71,7 @@ namespace Bicicletas.DataAccess
 
             using (SqlConnection conn = new SqlConnection(_cadena))
             {
-                using (SqlCommand cmd = new SqlCommand("Sp_BicicletaInsert", conn))
+                using (SqlCommand cmd = new SqlCommand("sp_BicicletaInsert", conn))
                 {
 
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -100,7 +100,7 @@ namespace Bicicletas.DataAccess
 
             using (SqlConnection conn = new SqlConnection(_cadena))
             {
-                using (SqlCommand cmd = new SqlCommand("Sp_BicicletaUpdate", conn))
+                using (SqlCommand cmd = new SqlCommand("sp_BicicletaUpdate", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@BicicletaId", entity.BicicletaId);
@@ -126,10 +126,10 @@ namespace Bicicletas.DataAccess
 
             using (SqlConnection con = new SqlConnection(_cadena))
             {
-                using (SqlCommand cmd = new SqlCommand("Sp_BicicletaSelectById", con))
+                using (SqlCommand cmd = new SqlCommand("sp_BicicletaSelectById", con))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@DoctorId", id);
+                    cmd.Parameters.AddWithValue("@BicicletaId", id);
                     con.Open();
                     using (SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.SingleResult))
                     {
@@ -160,7 +160,7 @@ namespace Bicicletas.DataAccess
 
             using (SqlConnection con = new SqlConnection(_cadena))
             {
-                using (SqlCommand cmd = new SqlCommand("Sp_BicicletaDelete", con))
+                using (SqlCommand cmd = new SqlCommand("sp_BicicletaDelete", con))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@BicicletaId", id);
