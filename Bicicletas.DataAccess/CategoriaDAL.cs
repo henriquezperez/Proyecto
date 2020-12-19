@@ -9,7 +9,7 @@ using Bicicletas.Entities;
 
 namespace Bicicletas.DataAccess
 {
-    public class CategoriaDAL : Conexion
+    public class CategoriaDAL : ConexionDAL
     {
         private static CategoriaDAL _instance;
 

@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace Bicicletas.DataAccess
 {
-    public class DetalleVentaDAL
+    public class DetalleVentaDAL : ConexionDAL
     {
         private static DetalleVentaDAL _instance;
 

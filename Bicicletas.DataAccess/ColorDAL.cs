@@ -9,7 +9,7 @@ using Bicicletas.Entities;
 
 namespace Bicicletas.DataAccess
 {
-    public class ColorDAL:Conexion
+    public class ColorDAL: ConexionDAL
     {
 
         private static ColorDAL _instance;

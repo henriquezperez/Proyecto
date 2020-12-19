@@ -9,7 +9,7 @@ using Bicicletas.Entities;
 
 namespace Bicicletas.DataAccess
 {
-    public class GarantiaDAL
+    public class GarantiaDAL : ConexionDAL
     {
 
         private static GarantiaDAL _instance;

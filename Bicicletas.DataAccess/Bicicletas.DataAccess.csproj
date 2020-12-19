@@ -47,7 +47,7 @@
     <Compile Include="ClasificacionBiciDAL.cs" />
     <Compile Include="ClienteDAL.cs" />
     <Compile Include="ColorDAL.cs" />
-    <Compile Include="Conexion.cs" />
+    <Compile Include="ConexionDAL.cs" />
     <Compile Include="DetalleVentaDAL.cs" />
     <Compile Include="EstadosDAL.cs" />
     <Compile Include="GarantiaDAL.cs" />

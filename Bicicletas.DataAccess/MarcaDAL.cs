@@ -9,7 +9,7 @@ using Bicicletas.Entities;
 
 namespace Bicicletas.DataAccess
 {
-    public class MarcaDAL:Conexion
+    public class MarcaDAL : ConexionDAL
     {
         private static MarcaDAL _instance;
 
