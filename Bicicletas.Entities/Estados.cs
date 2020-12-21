@@ -10,7 +10,7 @@ namespace Bicicletas.Entities
     {
         public int EstadoId { get; set; }
 
-        public string Nombre { get; set; }
+        public string NombreEstado { get; set; }
 
         public Estados()
         {
@@ -19,13 +19,13 @@ namespace Bicicletas.Entities
 
         public Estados(string nombreEst)
         {
-            Nombre = nombreEst;
+            NombreEstado = nombreEst;
         }
 
         public Estados(int estadoId, string nombreEst)
         {
             EstadoId = estadoId;
-            Nombre = nombreEst;
+            NombreEstado = nombreEst;
         }
     }
 }

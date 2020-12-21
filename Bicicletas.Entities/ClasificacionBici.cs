@@ -30,8 +30,6 @@ namespace Bicicletas.Entities
             ClasificacionBiciId = clasificacion;
             NombreClasificacion = nombre;
             TamanhoId = tamanho;
-
-
         }
 
 

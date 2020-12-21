@@ -81,7 +81,7 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // frmNuevoEstado
+            // FrmNuevoEstado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -91,7 +91,8 @@
             this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.label1);
-            this.Name = "frmNuevoEstado";
+            this.Name = "FrmNuevoEstado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNuevoEstado";
             this.Load += new System.EventHandler(this.FrmNuevoEstado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

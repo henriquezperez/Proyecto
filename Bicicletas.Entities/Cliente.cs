@@ -10,7 +10,7 @@ namespace Bicicletas.Entities
     {
         public int ClienteId { get; set; }
 
-        public int DUI { get; set; }
+        public string DUI { get; set; }
 
         public string Nombres { get; set; }
 
@@ -39,17 +39,23 @@ namespace Bicicletas.Entities
 
         }
 
-        public Cliente(string nombres, string apellidos)
+        public Cliente(string nombres, string apellidos, string telefono, string direccion, string correo)
         {
             Nombres = nombres;
             Apellidos = apellidos;
+            Telefono = telefono;
+            Direccion = direccion;
+            Correo = correo;
 
         }
-        public Cliente(int dui, string nombres, string apellidos)
+        public Cliente(string dui, string nombres, string apellidos, string telefono, string direccion, string correo)
         {
             DUI = dui;
             Nombres = nombres;
             Apellidos = apellidos;
+            Telefono = telefono;
+            Direccion = direccion;
+            Correo = correo;
 
         }
     }

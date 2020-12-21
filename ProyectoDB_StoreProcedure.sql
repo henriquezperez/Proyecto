@@ -1,4 +1,4 @@
-Use ProyectoBD
+use ProyectoBD
 
 go
 
@@ -465,13 +465,12 @@ go
 --INSERT
 create proc sp_ClasificacionInsert
 
-	@NombreClasificacion varchar (25),
-	@TamanhoId int
+	@NombreClasificacion varchar (25)
+	
 
 as begin
 	insert into ClasificacionBici(NombreClasificacion) values (@NombreClasificacion)
-	insert into ClasificacionBici(TamanhoId) values (@TamanhoId)
-
+	
 end
 go
 
@@ -479,14 +478,12 @@ go
 create proc sp_ClasificacionUpdate
 (
 	@ClasificacionBiciId int,
-	@NombreClasificacion varchar (25),
-	@TamanhoId int
+	@NombreClasificacion varchar (25)
+
 )
 as begin 
 	update ClasificacionBici set 
-	NombreClasificacion = @NombreClasificacion,
-	TamanhoId = @TamanhoId
-	where ClasificacionBiciId = @ClasificacionBiciId
+	NombreClasificacion = @NombreClasificacion where ClasificacionBiciId = @ClasificacionBiciId
 end
 go
 

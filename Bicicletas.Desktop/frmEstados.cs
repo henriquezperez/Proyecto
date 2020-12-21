@@ -45,7 +45,7 @@ namespace Bicicletas.Desktop
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
-            var query = _listado.Where(x => x.Nombre.ToLower().Contains(TextBox1.Text.Trim().ToLower())).ToList();
+            var query = _listado.Where(x => x.NombreEstado.ToLower().Contains(TextBox1.Text.Trim().ToLower())).ToList();
             DataGridView1.DataSource = query;
         }
 
@@ -56,7 +56,7 @@ namespace Bicicletas.Desktop
                 int id = (int)DataGridView1.Rows[e.RowIndex].Cells[2].Value;
                 string nombre = DataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
 
-                Estados entity = new Estados() { EstadoId = id, Nombre = nombre };
+                Estados entity = new Estados() { EstadoId = id, NombreEstado = nombre };
                 FrmNuevoEstado frm = new FrmNuevoEstado(entity);
                 frm.ShowDialog();
 

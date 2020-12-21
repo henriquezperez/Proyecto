@@ -8,7 +8,7 @@ namespace Bicicletas.Entities
 {
     public class DetalleVenta
     {
-        public int  DellVeentaId { get; set; }
+        public int  DellVentaId { get; set; }
 
         public int VentaId { get; set; }
 
@@ -20,5 +20,30 @@ namespace Bicicletas.Entities
 
         public decimal Total { get; set; }
 
+
+        public DetalleVenta ()
+        {
+
+        }
+
+        public DetalleVenta(int ventaId, int bicicletaId, int cantidad, decimal precio, decimal total)
+        {
+            VentaId = ventaId;
+            BicicletaId = bicicletaId;
+            Cantidad = cantidad;
+            Precio = precio;
+            Total = total;
+
+        }
+        public DetalleVenta(int detalleVentaId, int ventaId, int bicicletaId, int cantidad, decimal precio, decimal total)
+        {
+            DellVentaId = detalleVentaId;
+            VentaId = ventaId;
+            BicicletaId = bicicletaId;
+            Cantidad = cantidad;
+            Precio = precio;
+            Total = total;
+
+        }
     }
 }

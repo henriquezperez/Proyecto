@@ -9,7 +9,6 @@ namespace Bicicletas.DataAccess
 {
     public class ConexionDAL
     {
-        protected string _cadena =
-       ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+        protected string _cadena = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
     }
 }

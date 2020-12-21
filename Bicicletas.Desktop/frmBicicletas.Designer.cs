@@ -215,6 +215,7 @@
             this.button3.TabIndex = 16;
             this.button3.Text = "&Cancelar";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // frmBicicletas
             // 
@@ -240,6 +241,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "frmBicicletas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBicicletas";
             this.Load += new System.EventHandler(this.frmBicicletas_Load);
             this.ResumeLayout(false);

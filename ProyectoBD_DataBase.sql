@@ -16,7 +16,7 @@ create table ClasificacionBici(
 
 	ClasificacionBiciId int identity (1,1) not null primary key,
 	NombreClasificacion varchar (25) not null,
-	TamanhoId int not null foreign key (TamanhoId) references Tamanho(TamanhoId)
+	--TamanhoId int not null foreign key (TamanhoId) references Tamanho(TamanhoId)
 )
 
 create table Categoria(

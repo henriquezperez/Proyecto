@@ -16,5 +16,23 @@ namespace Bicicletas.Desktop
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmEstados frm = new frmEstados();
+            frm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmBicicletas frm = new frmBicicletas();
+            frm.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmRegistroCliente frm = new FrmRegistroCliente();
+            frm.ShowDialog();
+        }
     }
 }

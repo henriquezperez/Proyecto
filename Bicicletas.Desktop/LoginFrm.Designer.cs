@@ -121,6 +121,7 @@
             this.Controls.Add(this.Btnstar);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "LoginFrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginFrm";
             this.Load += new System.EventHandler(this.LoginFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

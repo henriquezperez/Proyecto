@@ -46,7 +46,7 @@ namespace Bicicletas.DataAccess
                             {
                                 entity = new Cliente()
                                 {
-                                    DUI = dr.GetInt32(0),
+                                    DUI = dr.GetString(0),
                                     Nombres = dr.GetString(1),
                                     Apellidos = dr.GetString(2),
                                 };

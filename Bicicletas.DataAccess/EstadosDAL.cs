@@ -10,7 +10,7 @@ using Bicicletas.Entities;
 
 namespace Bicicletas.DataAccess
 {
-    public class EstadosDAL: ConexionDAL
+    public class EstadosDAL : ConexionDAL
     {
         private static EstadosDAL _instance;
 
@@ -47,7 +47,7 @@ namespace Bicicletas.DataAccess
                                 {
                                     Estados entity = new Estados();
                                     entity.EstadoId = dr.GetInt32(0);
-                                    entity.Nombre = dr.GetString(1);
+                                    entity.NombreEstado = dr.GetString(1);
                                     _listado.Add(entity);
                                 }
                             }
@@ -86,7 +86,7 @@ namespace Bicicletas.DataAccess
                                 {
                                     Estados entity = new Estados();
                                     entity.EstadoId = dr.GetInt32(0);
-                                    entity.Nombre = dr.GetString(1);
+                                    entity.NombreEstado = dr.GetString(1);
                                 }
                             }
                         }
@@ -114,7 +114,7 @@ namespace Bicicletas.DataAccess
                     using (SqlCommand cmd = new SqlCommand("sp_EstadosInsert", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@Nombre", entity.Nombre);
+                        cmd.Parameters.AddWithValue("@NombreEstado", entity.NombreEstado);
 
                         conn.Open();
 
@@ -143,7 +143,7 @@ namespace Bicicletas.DataAccess
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@EstadoId", entity.EstadoId);
-                        cmd.Parameters.AddWithValue("@Nombre", entity.Nombre);
+                        cmd.Parameters.AddWithValue("@NombreEstado", entity.NombreEstado);
 
                         conn.Open();
 

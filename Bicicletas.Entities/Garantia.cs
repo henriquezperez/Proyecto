@@ -13,5 +13,23 @@ namespace Bicicletas.Entities
        public string Nombre { get; set; }
 
         public int TiempoGarantia { get; set; }
+
+        public Garantia()
+        {
+
+        }
+
+        public Garantia(string nombreGarantia, int tiempoGarantia)
+        {
+            Nombre = nombreGarantia;
+            TiempoGarantia = tiempoGarantia;
+
+        }
+        public Garantia(int garantiaId, string nombreGarantia, int tiempoGarantia)
+        {
+            GarantiaId = garantiaId;
+            Nombre = nombreGarantia;
+            TiempoGarantia = tiempoGarantia;
+        }
     }
 }

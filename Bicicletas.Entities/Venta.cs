@@ -12,14 +12,6 @@ namespace Bicicletas.Entities
 
         public int BicicletaId { get; set; }
 
-        /*
-        public string Nombres { get; set; }
-
-        public string Apellidos { get; set; }
-
-        public int DUI { get; set; }
-        */
-
         public int ClienteId { get; set; }
 
         public DateTime Fecha { get; set; }
@@ -28,13 +20,6 @@ namespace Bicicletas.Entities
 
         public int EstadoId { get; set; }
 
-        /*
-        public int GarantiaId { get; set; }
-
-        public int Cantidad { get; set; }
-
-        public decimal Subtotal { get; set; }
-        */
         public decimal Total { get; set; }
 
 
@@ -50,17 +35,11 @@ namespace Bicicletas.Entities
             PagoId = pagoId;
             EstadoId = estadoId;
             Total = total;
-            /*
-            GarantiaId = garantiaId;
-            Cantidad = cantidad;
-            Subtotal = subtotal; */
-
         }
 
         public Venta(int bicicletaId, DateTime fechaId, int pagoId, int estadoId, decimal total)
         {
             BicicletaId = bicicletaId;
-            
             Fecha = fechaId;
             PagoId = pagoId;
             EstadoId = estadoId;

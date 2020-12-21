@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BicicletaBL.cs" />
     <Compile Include="CategoriaBL.cs" />
+    <Compile Include="ClasificacionBiciBL.cs" />
     <Compile Include="ClienteBL.cs" />
     <Compile Include="ColorBL.cs" />
     <Compile Include="EstadoBL.cs" />

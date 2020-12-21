@@ -27,7 +27,7 @@ namespace Bicicletas.Desktop
             InitializeComponent();
             _entity = entity;
 
-            textBoxNombre.Text = entity.Nombre;
+            textBoxNombre.Text = entity.NombreEstado;
 
         }
 
@@ -44,7 +44,7 @@ namespace Bicicletas.Desktop
             }
             errorProvider1.Clear();
 
-            Estados entity = new Estados() { Nombre = textBoxNombre.Text.Trim() };
+            Estados entity = new Estados() { NombreEstado = textBoxNombre.Text.Trim() };
 
             if (_entity.EstadoId > 0)
             {
