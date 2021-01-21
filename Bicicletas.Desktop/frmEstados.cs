@@ -56,9 +56,15 @@ namespace Bicicletas.Desktop
                 int id = (int)DataGridView1.Rows[e.RowIndex].Cells[2].Value;
                 string nombre = DataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
 
-                Estados entity = new Estados() { EstadoId = id, NombreEstado = nombre };
+                Estados entity = new Estados()
+                {
+                    EstadoId = id,
+                    NombreEstado = nombre
+                };
+
                 FrmNuevoEstado frm = new FrmNuevoEstado(entity);
                 frm.ShowDialog();
+               // MessageBox.Show("El registro se Modifico correctamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
 

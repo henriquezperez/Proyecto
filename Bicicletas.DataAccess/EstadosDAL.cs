@@ -142,7 +142,7 @@ namespace Bicicletas.DataAccess
                     using (SqlCommand cmd = new SqlCommand("sp_EstadosUpdate", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@EstadoId", entity.EstadoId);
+                        cmd.Parameters.AddWithValue("@EstadosId", entity.EstadoId);
                         cmd.Parameters.AddWithValue("@NombreEstado", entity.NombreEstado);
 
                         conn.Open();

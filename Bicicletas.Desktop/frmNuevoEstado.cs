@@ -26,9 +26,7 @@ namespace Bicicletas.Desktop
         {
             InitializeComponent();
             _entity = entity;
-
             textBoxNombre.Text = entity.NombreEstado;
-
         }
 
         private void FrmNuevoEstado_Load(object sender, EventArgs e)
@@ -38,27 +36,27 @@ namespace Bicicletas.Desktop
 
         private void ButtonGuardar_Click(object sender, EventArgs e)
         {
-            if (textBoxNombre.Text == "")
+            
+            if (textBoxNombre.Text =="")
             {
-                errorProvider1.SetError(textBoxNombre, "Debe proporcionar un nombre al estado");
+                //errorProvider1.SetError(textBoxNombre,"Debe proporcionar un nombre al estado");
+                MessageBox.Show("Debe proporcionar un nombre al estado", "¿Nombre?", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            errorProvider1.Clear();
-
+            //errorProvider1.Clear();
             Estados entity = new Estados() { NombreEstado = textBoxNombre.Text.Trim() };
-
             if (_entity.EstadoId > 0)
             {
                 entity.EstadoId = _entity.EstadoId;
                 if (EstadoBL.Instance.Update(entity))
                 {
-                    MessageBox.Show("El registro se Modifico correctamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El registro se Modifico correctamente","Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
                 if (EstadoBL.Instance.Insert(entity))
                 {
-                    MessageBox.Show("El registro se agrego correctamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El registro se agrego correctamente","Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 

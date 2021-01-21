@@ -12,6 +12,7 @@ namespace Bicicletas.Entities
 
         public string NombreEstado { get; set; }
 
+        /*
         public Estados()
         {
 
@@ -26,6 +27,6 @@ namespace Bicicletas.Entities
         {
             EstadoId = estadoId;
             NombreEstado = nombreEst;
-        }
+        }*/
     }
 }
